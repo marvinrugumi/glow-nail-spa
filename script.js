@@ -39,20 +39,4 @@ if (list) {
     list.appendChild(li);
   }
   console.log("Items shown:", items.length);
-}
-const filterButton = document.querySelector("#filter-button");
-
-// Only run this on a page that has the filter button.
-if (filterButton) {
-  filterButton.addEventListener("click", function () {
-    list.innerHTML = "";
-    for (const item of items) {
-      if (item.includes("eye pencil")) {
-        const li = document.createElement("li");
-        li.textContent = item;
-        list.appendChild(li);
-      }
-    }
-  });
-}
-
+ }
