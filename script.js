@@ -18,7 +18,7 @@ if (toggleButton) {
       isOpen = false;
     } else {
       details.hidden = false;
-      toggleButton.textContent = "Hide opening hours";
+      toggleButton.textContent = " show opening hours";
       isOpen = true;
     }
     console.log("Box open:", isOpen);
