@@ -40,3 +40,24 @@ if (list) {
   }
   console.log("Items shown:", items.length);
  }
+// Day 6, Block 1: show every service from data.js on the Services page
+const dataList = document.querySelector("#data-list");
+
+// Only run this on a page that has the data list.
+if (dataList) {
+  for (const service of services) {
+    const li = document.createElement("li");
+
+    // Over an hour is a long appointment. Otherwise it is a quick visit.
+    let visit = "";
+    if (service.minutes > 60) {
+      visit = "Long appointment";
+    } else {
+      visit = "Quick visit";
+    }
+
+    li.textContent = service.name + " (" + service.category + "): KSh " + service.priceKsh + ", " + service.minutes + " minutes. " + visit;
+    dataList.appendChild(li);
+  }
+  console.log("Services shown:", services.length);
+}
